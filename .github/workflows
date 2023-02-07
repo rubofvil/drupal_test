@@ -1,0 +1,23 @@
+name: PHP Composer Install
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up PHP
+      uses: actions/setup-php@v1
+      with:
+        php-version: 7.4
+
+    - name: Install dependencies
+      run: composer install
+      working-directory: ${{ env.GITHUB_WORKSPACE }}
