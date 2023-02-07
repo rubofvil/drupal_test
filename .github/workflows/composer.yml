@@ -28,3 +28,4 @@ jobs:
         git config --local user.name "GitHub Action"
         git add vendor web
         git commit -m "Add vendor and web directory"
+        git push
