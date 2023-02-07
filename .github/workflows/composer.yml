@@ -22,7 +22,7 @@ jobs:
       run: composer install
       working-directory: ${{ env.GITHUB_WORKSPACE }}
 
-     - name: Save vendor and web directory to repository
+    - name: Save vendor and web directory to repository
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
