@@ -21,3 +21,10 @@ jobs:
     - name: Install dependencies
       run: composer install
       working-directory: ${{ env.GITHUB_WORKSPACE }}
+
+     - name: Save vendor and web directory to repository
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add vendor web
+        git commit -m "Add vendor and web directory"
