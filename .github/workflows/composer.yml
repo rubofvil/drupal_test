@@ -21,7 +21,7 @@ jobs:
       - uses: php-actions/composer@v6
         with:
           php_version: '8.1'
-          extensions: dom, curl, libxml, mbstring, zip, pdo, mysql, pdo_mysql, bcmath, exif, pcntl, gd, fileinfo, ctype, json, iconv, intl, soap, xml, tokenizer, xmlwriter, xsl, zip, opcache
+          php_extensions: dom, curl, libxml, mbstring, zip, pdo, mysql, pdo_mysql, bcmath, exif, pcntl, gd, fileinfo, ctype, json, iconv, intl, soap, xml, tokenizer, xmlwriter, xsl, zip, opcache
           composer_version: '2'
           cache_dir: /tmp/composer-cache
 
