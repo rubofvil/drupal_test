@@ -6,27 +6,25 @@ on:
       - main
 
 jobs:
-  build:
-    runs-on: ubuntu-20.04
+  composer:
+    runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v1
+      - uses: actions/checkout@v2
 
-    - name: Set up PHP
-      uses: shivammathur/setup-php@v2
-      with:
-        php-version: 7.4
+      - name: Cache Composer dependencies
+        uses: actions/cache@v2
+        with:
+          path: /tmp/composer-cache
+          key: ${{ runner.os }}-${{ hashFiles('**/composer.lock') }}
 
-    - name: Install dependencies
-      run: composer install
-      working-directory: ${{ env.GITHUB_WORKSPACE }}
+      - uses: php-actions/composer@v5
 
-    - name: Save vendor and web directory to repository
-      run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git config --global core.autocrlf false
-        git add vendor web
-        git commit -m "Add vendor and web directory"
-        git push
+      - name: Archive build
+        run: mkdir /tmp/github-actions/ && tar -cvf /tmp/github-actions/build.tar ./
+
+      - name: Upload build archive for test runners
+        uses: actions/upload-artifact@v2
+        with:
+          name: build-artifact
+          path: /tmp/github-actions
