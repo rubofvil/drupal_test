@@ -15,21 +15,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-
       - uses: "ramsey/composer-install@v2"
         with:
           ignore-cache: "yes"
-
-      # - name: Archive build
-      #   run: mkdir /tmp/github-actions/ && tar -cvf /tmp/github-actions/build.tar ./
-      # - name: Upload build archive for test runners
-      #   uses: actions/upload-artifact@v2
-      #   with:
-      #     name: build-artifact
-      #     path: /tmp/github-actions
-
-      - name: Create Release
-        uses: "marvinpinto/action-automatic-releases@latest"
+      - uses: "marvinpinto/action-automatic-releases@latest"
                 with:
                   repo_token: "${{ secrets.GITHUB_TOKEN }}"
                   automatic_release_tag: "latest"
