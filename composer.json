@@ -43,7 +43,7 @@
     "drush/drush": "^10.6",
     "phpunit/phpunit": "^9.5",
     "symfony/css-selector": "^4.4",
-    "symfony/dom-crawler": "^5.3"
+    "symfony/dom-crawler": "^4.4"
   },
   "conflict": {
     "drupal/drupal": "*"
