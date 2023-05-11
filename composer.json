@@ -20,9 +20,9 @@
   ],
   "require": {
     "civicrm/civicrm-asset-plugin": "~1.1",
-    "civicrm/civicrm-core": "~5.51",
-    "civicrm/civicrm-drupal-8": "~5.51",
-    "civicrm/civicrm-packages": "~5.51",
+    "civicrm/civicrm-core": "~5.57",
+    "civicrm/civicrm-drupal-8": "~5.57",
+    "civicrm/civicrm-packages": "~5.57",
     "civicrm/redsys": "2.4.2",
     "composer/installers": "^1.9",
     "drupal/core-composer-scaffold": "^9.3",
