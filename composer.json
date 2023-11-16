@@ -25,7 +25,7 @@
     "civicrm/civicrm-packages": "~5.63",
     "civicrm/redsys": "2.4.2",
     "composer/installers": "^1.9",
-    "drupal/core-composer-scaffold": "^9.3",
+    "drupal/core-composer-scaffold": "^9.5",
     "drupal/core": "^9.5",
     "drupal/core-project-message": "^9.5",
     "drupal/core-recommended": "^9.5",
