@@ -107,6 +107,13 @@
     "compile-whitelist": [
       "civicrm/civicrm-core",
       "civicrm/composer-compile-lib"
-    ]
+    ],
+    "extra": {
+      "patches": {
+        "civicrm/civicrm-core": {
+          "Forces CiviCRM to read extensions from /vendor/civicrm": "https://gist.githubusercontent.com/rubofvil/cad738d87e551985842038dd01cf0c73/raw/3263b1b4aa28d74ba7004e83ed65d9d76450ba20/vendor_civicrm_ext.php.patch"
+        }
+      }
+    }
   }
 }
