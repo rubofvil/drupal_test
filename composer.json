@@ -20,9 +20,10 @@
   ],
   "require": {
     "civicrm/civicrm-asset-plugin": "~1.1",
-    "civicrm/civicrm-core": "~5.63",
-    "civicrm/civicrm-drupal-8": "~5.63",
-    "civicrm/civicrm-packages": "~5.63",
+    "civicrm/civicrm-core": "5.68.x-dev",
+    "civicrm/civicrm-drupal-8": "5.68.x-dev",
+    "civicrm/civicrm-packages": "5.68.x-dev",
+    "civicrm/upgrade-test": "0.5",
     "civicrm/redsys": "2.4.2",
     "composer/installers": "^1.9",
     "drupal/core-composer-scaffold": "^9.5",
@@ -32,8 +33,7 @@
     "drupal/group": "^1.4",
     "drupal/token": "^1.9",
     "drupal/webform": "6.x-dev",
-    "drupal/webform_civicrm": "6.x-dev",
-    "phpspec/prophecy-phpunit": "^2"
+    "drupal/webform_civicrm": "6.x-dev"
   },
   "require-dev": {
     "semperit/minkcivicrmhelpers": "master",
@@ -42,10 +42,9 @@
     "behat/mink-selenium2-driver": "^1.4",
     "drupal/coder": "^8.3",
     "drush/drush": "^10.6",
-    "phpunit/phpunit": "^9.5",
+    "phpunit/phpunit": "8.5.36",
     "symfony/css-selector": "^4.4",
-    "symfony/dom-crawler": "^4.4",
-    "symfony/phpunit-bridge": "^6.3"
+    "symfony/dom-crawler": "^4.4"
   },
   "conflict": {
     "drupal/drupal": "*"
