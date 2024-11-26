@@ -41,15 +41,15 @@
     "behat/mink-goutte-driver": "^1.2",
     "behat/mink-selenium2-driver": "^1.4",
     "drupal/coder": "^8.3",
-    "drush/drush": "^11.6",
-    "phpunit/phpunit": "8.5.36",
-    "symfony/css-selector": "^4.4",
-    "symfony/dom-crawler": "^4.4"
+    "drush/drush": "^12.4.3",
+    "phpunit/phpunit": "^9.5",
+    "symfony/css-selector": "^5.4",
+    "symfony/dom-crawler": "^5.4"
   },
   "conflict": {
     "drupal/drupal": "*"
   },
-  "minimum-stability": "dev",
+  "minimum-stability": "stable",
   "prefer-stable": true,
   "config": {
     "allow-plugins": true,
