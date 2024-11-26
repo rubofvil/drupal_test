@@ -32,8 +32,8 @@
     "drupal/core-recommended": "^10.2",
     "drupal/group": "^1.4",
     "drupal/token": "^1.9",
-    "drupal/webform": "6.x-dev",
-    "drupal/webform_civicrm": "6.x-dev"
+    "drupal/webform": "6.2.7",
+    "drupal/webform_civicrm": "6.3.0"
   },
   "require-dev": {
     "semperit/minkcivicrmhelpers": "master",
