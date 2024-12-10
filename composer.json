@@ -42,7 +42,8 @@
     "drush/drush": "^12.4.3",
     "phpunit/phpunit": "^9.5",
     "symfony/css-selector": "^5.4",
-    "symfony/dom-crawler": "^5.4"
+    "symfony/dom-crawler": "^5.4",
+    "vlucas/phpdotenv": "^2.1"
   },
   "conflict": {
     "drupal/drupal": "*"
