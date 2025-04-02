@@ -16,9 +16,22 @@
     {
       "type": "vcs",
       "url": "https://lab.civicrm.org/extensions/redsys.git"
+    },
+   {
+      "type": "package",
+      "package" : {
+        "name": "civicrm/mosaico",
+        "version" : "3.5",
+        "type":"civicrm-extension",
+        "dist": {
+          "type": "zip",
+          "url": "https://download.civicrm.org/extension/uk.co.vedaconsulting.mosaico/3.5.1709296836/uk.co.vedaconsulting.mosaico-3.5.1709296836.zip"
+        }
+      }
     }
   ],
   "require": {
+    "civicrm/mosaico": "3.5",
     "civicrm/civicrm-asset-plugin": "~1.1",
     "civicrm/civicrm-core": "5.79.1",
     "civicrm/civicrm-drupal-8": "5.79.1",
@@ -90,6 +103,9 @@
       ],
       "web/themes/custom/{$name}": [
         "type:drupal-custom-theme"
+      ],
+      "web/sites/default/civicrm/ext/{$name}": [
+        "type:civicrm-extension"
       ]
     },
     "drupal-core-project-message": {
