@@ -28,16 +28,21 @@
           "url": "https://download.civicrm.org/extension/uk.co.vedaconsulting.mosaico/3.5.1709296836/uk.co.vedaconsulting.mosaico-3.5.1709296836.zip"
         }
       }
+    },
+    {
+      "type": "git",
+      "url": "https://lab.civicrm.org/extensions/stripe.git"
     }
   ],
   "require": {
     "civicrm/mosaico": "3.5",
     "civicrm/civicrm-asset-plugin": "~1.1",
-    "civicrm/civicrm-core": "5.79.1",
-    "civicrm/civicrm-drupal-8": "5.79.1",
-    "civicrm/civicrm-packages": "5.79.1",
+    "civicrm/civicrm-core": "5.82.1",
+    "civicrm/civicrm-drupal-8": "5.82.1",
+    "civicrm/civicrm-packages": "5.82.1",
     "civicrm/upgrade-test": "0.5",
     "civicrm/redsys": "2.4.2",
+    "civicrm/stripe": "6.11.4",
     "composer/installers": "^1.9",
     "drupal/core-composer-scaffold": "^10.2",
     "drupal/core": "^10.2",
