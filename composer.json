@@ -30,7 +30,7 @@
       }
     },
     {
-      "type": "git",
+      "type": "vcs",
       "url": "https://lab.civicrm.org/extensions/stripe.git"
     }
   ],
@@ -110,7 +110,8 @@
         "type:drupal-custom-theme"
       ],
       "web/sites/default/civicrm/ext/{$name}": [
-        "type:civicrm-extension"
+        "type:civicrm-extension",
+        "type:civicrm-ext"
       ]
     },
     "drupal-core-project-message": {
