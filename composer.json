@@ -36,6 +36,10 @@
     {
       "type": "vcs",
       "url": "https://lab.civicrm.org/extensions/mjwshared.git"
+    },
+    {
+      "type": "vcs",
+      "url": "https://lab.civicrm.org/extensions/firewall.git"
     }
   ],
   "require": {
@@ -48,6 +52,7 @@
     "civicrm/redsys": "3.1.7",
     "civicrm/stripe": "6.11.4",
     "civicrm/mjwshared": "1.4.0",
+    "civicrm/firewall": "1.5.10",
 
     "composer/installers": "^1.9",
 
