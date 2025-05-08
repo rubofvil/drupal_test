@@ -109,7 +109,7 @@
       "web/themes/custom/{$name}": [
         "type:drupal-custom-theme"
       ],
-      "web/sites/default/civicrm/ext/{$name}": [
+      "web/sites/default/files/civicrm/ext/{$name}": [
         "type:civicrm-extension",
         "type:civicrm-ext"
       ]
