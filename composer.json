@@ -45,9 +45,9 @@
   "require": {
     "civicrm/mosaico": "3.5",
     "civicrm/civicrm-asset-plugin": "~1.1",
-    "civicrm/civicrm-core": "5.82.1",
-    "civicrm/civicrm-drupal-8": "5.82.1",
-    "civicrm/civicrm-packages": "5.82.1",
+    "civicrm/civicrm-core": "6.2.0",
+    "civicrm/civicrm-drupal-8": "6.2.0",
+    "civicrm/civicrm-packages": "6.2.0",
     "civicrm/upgrade-test": "0.5",
     "civicrm/redsys": "3.1.7",
     "civicrm/stripe": "6.11.4",
@@ -139,13 +139,6 @@
     "compile-whitelist": [
       "civicrm/civicrm-core",
       "civicrm/composer-compile-lib"
-    ],
-    "extra": {
-      "patches": {
-        "civicrm/civicrm-core": {
-          "Forces CiviCRM to read extensions from /vendor/civicrm": "https://gist.githubusercontent.com/rubofvil/cad738d87e551985842038dd01cf0c73/raw/3263b1b4aa28d74ba7004e83ed65d9d76450ba20/vendor_civicrm_ext.php.patch"
-        }
-      }
-    }
+    ]
   }
 }
