@@ -28,6 +28,33 @@ jobs:
       - name: Build Zip
         run: |
           zip -r artifact-${{ github.ref_name }} *
+      - name: Parse Version from Tag
+        run: |
+          RAW_TAG="${{ github.ref_name }}"
+          echo "Raw tag: ${RAW_TAG}"
+
+          # Regex to capture Drupal and CiviCRM versions
+          # Example: v10.4.7-6.2.0 or 10.4.7-6.2.0-beta1
+          # Group 1: Drupal version (e.g., 10.4.7)
+          # Group 2: CiviCRM version (e.g., 6.2.0)
+          REGEX="^v?([0-9.]+)-([0-9.]+)(?:-.*)?$"
+
+          if [[ $RAW_TAG =~ $REGEX ]]; then
+            DRUPAL_VERSION="${BASH_REMATCH[1]}"
+            CIVICRM_VERSION="${BASH_REMATCH[2]}"
+            echo "Successfully parsed versions."
+            echo "Drupal Version: $DRUPAL_VERSION"
+            echo "CiviCRM Version: $CIVICRM_VERSION"
+          else
+            echo "Failed to parse versions from tag: $RAW_TAG"
+            # Set to placeholder or error values if parsing fails
+            DRUPAL_VERSION="N/A"
+            CIVICRM_VERSION="N/A"
+          fi
+
+          echo "DRUPAL_VERSION=${DRUPAL_VERSION}" >> $GITHUB_ENV
+          echo "CIVICRM_VERSION=${CIVICRM_VERSION}" >> $GITHUB_ENV
+        id: parse_version
       - name: Create release
         id: create_release
         uses: actions/create-release@v1
@@ -37,7 +64,10 @@ jobs:
           tag_name: ${{ github.ref }}
           release_name: ${{ github.ref }}
           draft: false
-          body: TODO
+          body: |
+            Release for Drupal version: ${{ env.DRUPAL_VERSION }}
+            CiviCRM version: ${{ env.CIVICRM_VERSION }}
+            Tag: ${{ github.ref_name }}
           path: build
       - name: Upload Release Asset
         id: upload-release-asset
